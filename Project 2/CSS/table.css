@@ -1,0 +1,268 @@
+
+*{
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    
+}
+
+#image{
+  width: 100%;
+  height: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+/*Nav starts---------------------------------------------------------*/
+nav{
+  
+  font-family: 'Poppins', sans-serif;
+  background: #000;
+  height: 80px;
+  width: 100%;
+  overflow: hidden;
+}
+label.logo{
+  float: left;
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 60px;
+  margin: 0 5px;
+}
+nav ul li a{
+  text-decoration: none;
+  list-style: none;
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a:hover{
+  background: #1b9bff;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+  /*Nav ends---------------------------------------------------------*/
+  .divider-hr{
+    height: 5px;
+    border: none; 
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: linear-gradient(to left, blue, red);
+  }
+/*Table starts---------------------------------------------------------*/
+  .res-table{
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 20px;
+    
+    
+  }
+  .res-table .content{
+    background: #26649E;
+    color: white;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px 0 rgba(148, 31, 31, 0.5);
+  }
+  .content-hp {
+    width: 80%;
+    padding-left: 20%;
+    justify-content: center;
+    text-align: center;
+  }
+  table{
+    
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .res-table td, .res-table th{
+    padding: 12px 15px;
+    border:1px solid #dddddd;
+    text-align: center;
+    font-size: 16px;
+  }
+  .res-table th{
+    background-color: #00008b;
+    color: #fff;
+  }
+  .res-table tbody tr:nth-child(even){
+    background-color: #50A0EB;
+  }
+
+/*Table ends---------------------------------------------------------*/
+
+
+/* Footer starts---------------------------------------------------------*/
+footer{
+    font-family: Josefin Sans, sans-serif ;
+    background:#1B2936 ;
+    color: whitesmoke;
+  }
+  .footer .container{
+  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 0px;
+    width: 100%;
+    margin: 0;
+  }
+  .about-us{
+    padding: 1rem;
+  }
+  .quick-links{
+    text-align: center;
+  }
+  .quick-links ul{
+    
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+  }
+  .quick-links li{
+    
+    line-height: 2em;
+  }
+  .quick-links a{
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+  .footer-bottom{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background: #416482;
+    color: white;
+    text-align: center;
+  }
+  /* Footer---------------------------------------------------------*/
+
+  /*Responsive---------------------------------------------------------*/
+  /* Responsive---------------------------------------------------------*/
+@media screen and (max-width: 768px)
+{
+  .checkbtn{
+    display: block;
+    
+  }
+  nav{
+    overflow: hidden;
+    
+  }
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    opacity: 0.6;
+    top: 60px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    overflow: hidden;
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+
+  /*Table Starts---------------------------------------------------------*/
+  table thead{
+    display: none;
+  }
+  table{
+    width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
+  }
+  table tbody, td, th{
+    
+    display: inline-block;
+    width: 100%;
+  }
+  table tr{
+    margin-bottom: 15px;
+  }
+
+  table td::before{
+  content: attr(data-lable);
+  position: absolute;
+  left: 0;
+  width: 50%;
+  padding-left: 15px;
+  font-weight: bold;
+  }
+  /*Table Ends
+    table tbody, td, th{
+      display: block;
+      width: 100%;
+    }
+      table tr{
+      margin-bottom: 15px;
+    }
+    table td{
+      text-align: right;
+      padding-left: 50%;
+      text-align: right;
+      position: relative;
+    }
+    table td::before{
+    content: attr(data-lable);
+    position: absolute;
+    left: 0;
+    width: 50%;
+    padding-left: 15px;
+    font-weight: bold;
+    }
+  ---------------------------------------------------------*/
+
+  footer.footer .container{
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+  .footer .container .newsletter{
+    padding-top: 1rem;
+    
+    padding-bottom: 1rem;
+  }
+}

@@ -1,0 +1,266 @@
+
+*{
+    box-sizing: border-box;
+    
+  }
+  body{
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+      background-color:#55ffe5;
+      
+  }
+  
+  .container{
+      
+      text-align: center;
+      justify-content: center;
+      overflow: hidden;
+  }
+  /*Nav starts---------------------------------------------------------*/
+  nav{
+      
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+  }
+  label.logo{
+    float: left;
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+  }
+  nav ul{
+    float: right;
+    margin-right: 20px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 60px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+  }
+  a:hover{
+    background: #1b9bff;
+    transition: .5s;
+  }
+  .checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  /*Nav ends---------------------------------------------------------*/
+
+  /*Contact Us---------------------------------------------------------*/
+  #contactUs .container-contactUs{
+      width: 80%;
+      margin: 50px auto;
+  }
+  .contact-box{
+      background: #fff;
+      display: flex;
+  }
+  .contact-left{
+      flex-basis: 60%;
+      padding: 40px 60px;
+  }
+  .contact-right{
+    flex-basis: 40%;
+    padding: 40px;
+    background: #1c00b5;
+    color: white;
+}
+.container-contactUs h1{
+    margin-bottom: 40px;
+}
+.container-contactUs h1{
+    margin-bottom: 10px;
+}
+.container-contactUs p{
+    margin-bottom: 40px;
+}
+ .input-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.input-row .input-group{
+    flex-basis: 45%;
+}
+.input-group input{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom: 5px;
+}
+.contact-left textarea{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding-bottom: 10px;
+}
+.contact-left label, .input-group label{
+    margin-bottom: 6px;
+    display: block;
+    color: #1c00b5;
+}
+.contact-left button{
+    background: #1c00b5;
+    width: 100px;
+    border: none;
+    outline: none;
+    color: #fff;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 20px;
+    box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+}
+.contact-left h3{
+    color: #1c00b5;
+    font-weight: 600px;
+    margin-bottom: 30px;
+}
+.contact-right h3{
+    font-weight: 600px;
+    margin-bottom: 30px;
+}
+tr td:first-child{
+    padding-right: 20px;
+}
+tr td{
+    padding-top: 20px;
+}
+  /*Contact Us---------------------------------------------------------*/
+
+  /* Footer starts---------------------------------------------------------*/
+  footer{
+    font-family: Josefin Sans, sans-serif ;
+    background:#1B2936;
+    color: whitesmoke;
+}
+.footer .container{
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 0px;
+    width: 100%;
+    margin: 0;
+}
+.about-us{
+    padding: 1rem;
+}
+.quick-links{
+    text-align: center;
+}
+.quick-links ul{
+    
+    list-style-type: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+.quick-links li{
+    
+    line-height: 2em;
+}
+.quick-links a{
+    color: white;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.footer-bottom{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background: #416482;
+    height: 62.4px;
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+.footer-bottom #copy{
+  padding: 20px;
+}
+  /* Footer---------------------------------------------------------*/
+
+  /*Responsive---------------------------------------------------------*/
+  /* Responsive---------------------------------------------------------*/
+@media screen and (max-width: 768px)
+{
+  .checkbtn{
+    display: block;
+    
+  }
+  nav{
+    overflow: hidden;
+    position: fixed;
+    top: -5px;
+  }
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    opacity: 0.6;
+    top: 60px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    overflow: hidden;
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+  /*Contact Us---------------------------------------------------------*/
+  .contact-box{
+
+    display: block;
+}
+  /*Contact Us---------------------------------------------------------*/
+
+  footer.footer .container{
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+  .footer .container .newsletter{
+    padding-top: 1rem;
+    
+    padding-bottom: 1rem;
+  }
+}
